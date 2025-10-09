@@ -5,6 +5,7 @@ This repository contains a reproducible pipeline to train an Actor–Critic Rein
 ---
 Offline RL: Is a Reinforcement Learning techinique to train an agent only from logged interaction
             data. 
+            
             Instead of train the agent based of it's own interaction with the environment, the agent learns from a dataset of 
             _(state, action, reward, next-state)_ tuples collected by a logging policy, aiming to maximize long-term return while staying within the support of the data.
 ---
