@@ -2,17 +2,24 @@
 
 This repository contains a reproducible pipeline to train an Actor–Critic Reinforcement Learning agent for movie recommendation using Offline RL.
 
----
-Offline RL: Is a Reinforcement Learning techinique to train an agent only from logged interaction
-            data. 
-            
-            Instead of train the agent based of it's own interaction with the environment, the agent learns from a dataset of 
-            _(state, action, reward, next-state)_ tuples collected by a logging policy, aiming to maximize long-term return while staying within the support of the data.
----
+```markdown
+# Offline RL
+Is a Reinforcement Learning techinique to train an agent only from logged interaction data.
+
+Instead of train the agent based of it's own interaction with the environment, the agent learns from a dataset of 
+_(state, action, reward, next-state)_ tuples collected by a logging policy, aiming to maximize long-term return while staying within the support of the data.
+```
+
+```markdown
+How to get aprroximate online feedbacks if the agents training do not come from environment interaction?
+
+We follow the approach proposed in https://arxiv.org/pdf/1801.00209.pdf by building an Online Simulator Memory which also
+led us to evalute the recommender perfomance before applying online.
+```
 
 ## MDP definition
 
-- State ($s$): user history of watched movies in chronological order.
+- State ($s$): user history of watched movies in chronological order N items.
 
 - Action ($a$): the recommendation decision (single item or slate of K items)
 
