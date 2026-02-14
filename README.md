@@ -4,6 +4,10 @@ A reproducible end-to-end pipeline that trains an **Actor–Critic** agent to re
 
 User histories are encoded through a GRU network into dense embeddings, enabling the agent to capture sequential reading preferences and generate personalized recommendations evaluated with ranking metrics (NDCG@K, Recall@K) and off-policy estimators.
 
+<p align="center">
+  <img src="images/repo_overview.png" width="700" alt="Project Overview" />
+</p>
+
 ```markdown
 # Offline RL
 Is a Reinforcement Learning techinique to train an agent only from logged interaction data.
