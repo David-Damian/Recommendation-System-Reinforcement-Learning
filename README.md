@@ -1,6 +1,8 @@
-# Recommendation-System-Reinforcement-Learning
+# 📚 Recommendation System with Deep Reinforcement Learning
 
-This repository contains a reproducible pipeline to train an Actor–Critic Reinforcement Learning agent for movie recommendation using Offline RL.
+A reproducible end-to-end pipeline that trains an **Actor–Critic** agent to recommend books — learning entirely from logged user interactions on the [GoodBooks-10k](https://github.com/zygmuntz/goodbooks-10k) dataset, with **no online exploration required**. 
+
+User histories are encoded through a GRU network into dense embeddings, enabling the agent to capture sequential reading preferences and generate personalized recommendations evaluated with ranking metrics (NDCG@K, Recall@K) and off-policy estimators.
 
 ```markdown
 # Offline RL
@@ -29,6 +31,7 @@ led us to evalute the recommender perfomance before applying online.
 
 
 ## Model architecture
+
 A user’s interaction history is encoded with a GRU (128D). The Actor produces a candidate action vector (64D) that is mapped to real catalog items via Nearest-Neighbor retrieval (FAISS). The Critic evaluates state–action pairs to approximate long-term value. 
 
 Training uses logged data only (no online exploration) and supports reward shaping for clicks, watch-time, or ratings.
