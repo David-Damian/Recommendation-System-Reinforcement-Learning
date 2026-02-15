@@ -8,20 +8,17 @@ User histories are encoded through a GRU network into dense embeddings, enabling
   <img src="images/repo_overview.png" width="700" alt="Project Overview" />
 </p>
 
-```markdown
-# Offline RL
+## What about Offline Reinforcement Learning?
+
 Is a Reinforcement Learning techinique to train an agent only from logged interaction data.
 
 Instead of train the agent based of it's own interaction with the environment, the agent learns from a dataset of 
 _(state, action, reward, next-state)_ tuples collected by a logging policy, aiming to maximize long-term return while staying within the support of the data.
-```
 
-```markdown
 How to get aprroximate online feedbacks if the agents training do not come from environment interaction?
 
 We follow the approach proposed in https://arxiv.org/pdf/1801.00209.pdf by building an Online Simulator Memory which also
 led us to evalute the recommender perfomance before applying online.
-```
 
 ## MDP definition
 
